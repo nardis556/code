@@ -34,3 +34,5 @@ nvm
 pyenv
 
 echo 'complete'
+
+bash -c 'exec bash'
