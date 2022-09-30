@@ -1,6 +1,6 @@
 # code
 
-installs code-server, nvm, and pyenv
+install code-server, nvm, and pyenv at once
 
 run
 
