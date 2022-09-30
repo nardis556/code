@@ -1,7 +1,5 @@
-# code
+#install code-server, nvm, and pyenv at once
 
-install code-server, nvm, and pyenv at once
-
-run
+##run
 
 ```wget https://raw.githubusercontent.com/nardis556/code/main/code.sh && chmod a+x code.sh && bash code.sh```
