@@ -6,11 +6,8 @@ function deps() {
     bash -c 'sudo apt upgrade -y'
 }
 
-function codeServer() {
-    echo 'installing code-server'
-    bash -c 'curl -fsSL https://code-server.dev/install.sh | sh'
-    bash -c 'systemctl enable --now code-server@$USER'
-}
+curl -fsSL https://code-server.dev/install.sh | sh
+systemctl enable --now code-server@$USER
 
 function nvm() {
     echo 'installing nvm'
@@ -29,7 +26,6 @@ function pyenv() {
 }
 
 deps
-codeServer
 nvm
 pyenv
 
