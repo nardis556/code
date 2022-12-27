@@ -1,7 +1,7 @@
 #!bin/bash
 
 function deps() {
-    bash -c 'sudo apt update'
+    bash -c 'sudo apt update && sudo apt upgrade -y'
     bash -c 'sudo apt install curl git gcc make make build-essential \
             libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
             wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev \
@@ -11,7 +11,7 @@ function deps() {
 
 function code() {
     bash -c 'curl -fsSL https://code-server.dev/install.sh | sh'
-    bash -c 'systemctl enable --now code-server@$USER'
+    bash -c 'sudo systemctl enable --now code-server@$USER'
 }
 
 
