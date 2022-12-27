@@ -41,20 +41,24 @@ read codeCond
 echo 'installing dependencies'
 deps
 
-if [ $pyenvCond == 'y' ]
+if [ $pyenvCond == 'y' -o $pyenvCond == 'Y' ]
 then
   echo "installing pyenv"
   pyenv
 fi
-if [ $nvmCond == 'y' ]
+if [ $nvmCond == 'y' -o $nvmCond == 'Y' ]
 then
   echo "installing nvm"
   nvm
+  bash -c 'nvm install-latest-npm'
+  bash -c 'npm install -g typescript'
+  bash -c 'sudo apt install tsc'
 fi
-if [ $codeCond == 'y' ]
+if [ $codeCond == 'y' -o $codeCond == 'Y' ]
 then
   echo "installing code-server"
   code
 fi
 
+exec bash
 echo "Done"
