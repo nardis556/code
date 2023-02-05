@@ -52,7 +52,6 @@ then
   nvm
   bash -c 'nvm install-latest-npm'
   bash -c 'npm install -g typescript'
-  bash -c 'sudo apt install tsc'
 fi
 if [ $codeCond == 'y' -o $codeCond == 'Y' ]
 then
