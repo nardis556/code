@@ -51,7 +51,6 @@ then
   echo "installing nvm"
   nvm
   bash -c 'nvm install-latest-npm'
-  bash -c 'npm install -g typescript'
 fi
 if [ $codeCond == 'y' -o $codeCond == 'Y' ]
 then
